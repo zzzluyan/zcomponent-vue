@@ -9,14 +9,15 @@
         v-model="checked"
         @change="test"
         TValue="I am true"
-        FValue="I am false">123 {{checked}}
-      </z-check-box>
+        FValue="I am false">123 {{checked}}</z-check-box>
     </div>
     <div>
       <z-input
         placeholder="test"
-        v-model="inputText"></z-input>
-        <span>inputText: {{inputText}}</span>
+        v-model="inputText"
+        @blur="inputBlur"
+        @focus="inputFocus"
+        @on-change="inputChange">inputText: {{inputText}}</z-input>
     </div>
 	</div>
 </template>
@@ -32,7 +33,16 @@
 		},
     methods: {
       test(e) {
-        console.log(e);
+        console.log('test', e);
+      },
+      inputBlur(e) {
+        console.log('blur', e);
+      },
+      inputFocus(e) {
+        console.log('focus', e);
+      },
+      inputChange(e) {
+        console.log('change', e);
       }
     }
 	}
