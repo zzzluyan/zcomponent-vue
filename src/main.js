@@ -6,11 +6,13 @@ import router from './router';
 import ZButton from './components/Button';
 import ZCheckBox from './components/CheckBox';
 import ZInput from './components/Input';
+import ZRadio from './components/Radio';
 
 Vue.config.productionTip = false
 Vue.use(ZButton);
 Vue.use(ZCheckBox);
 Vue.use(ZInput);
+Vue.use(ZRadio);
 
 /* eslint-disable no-new */
 new Vue({

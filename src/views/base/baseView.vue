@@ -19,6 +19,17 @@
         @focus="inputFocus"
         @on-change="inputChange">inputText: {{inputText}}</z-input>
     </div>
+    <div>
+      <z-radio
+        v-model="radioValue"
+        val="radio1"
+        @click="test"
+        >radio</z-radio>
+        <z-radio
+        v-model="radioValue"
+        val="radio2"
+        >radio2</z-radio>
+    </div>
 	</div>
 </template>
 <script>
@@ -28,7 +39,8 @@
 			return {
         checked: false,
         cValue: 'test',
-        inputText: ''
+        inputText: '',
+        radioValue: 'radio2'
       }
 		},
     methods: {

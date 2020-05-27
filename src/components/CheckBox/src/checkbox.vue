@@ -71,7 +71,7 @@
   }
   .z-component-checkbox--default::after {
     position: absolute;
-    box-sizing: content-box;
+    /* box-sizing: content-box; */
     content: "";
     border: 2px solid #fff;
     border-left: 0;
